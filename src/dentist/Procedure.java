@@ -1,6 +1,8 @@
 package dentist;
 
-public class Procedure {
+import java.io.Serializable;
+
+public class Procedure implements Serializable{
 
 	private TypeOfOperation operationType;
 	private int operationPrice;

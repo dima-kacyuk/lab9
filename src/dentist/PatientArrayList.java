@@ -19,7 +19,7 @@ public class PatientArrayList{
 			outStream.close();
 			fileOut.flush();
 			fileOut.close();
-			System.out.println("Внесенные данные сохранены в файле: ");
+			System.out.println("Внесенные данные сохранены в файле: " + fileName);
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
