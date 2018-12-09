@@ -33,6 +33,14 @@ public class PatientArrayList{
 			this.patients = (ArrayList<PatientInformation>) inStream.readObject();
 			inStream.close();
 			fileIn.close();
+			
+			FileOutputStream fileOutCopy = new FileOutputStream("./backup/copyFile" + (new Date().getTime()) + ".ser");
+			ObjectOutputStream outStreamCopy = new ObjectOutputStream(fileOutCopy);
+			outStreamCopy.writeObject(patients);
+			outStreamCopy.flush();
+			outStreamCopy.close();
+			fileOutCopy.flush();
+			fileOutCopy.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			return;
